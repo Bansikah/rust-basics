@@ -1,3 +1,5 @@
+#![allow(unused_variables)]
+
 fn main() {
     let durk = "Durk";
     let airline = "Airlines";
@@ -54,4 +56,29 @@ fn main() {
     println!("{}", squared);
     println!("{}", float_float);
     println!("{}", float_integer);
+
+    //Logical operations
+    let is_equal_true = 1 == 1;
+    let not_equal_false = 1 == 2;
+    let is_not_equal = 1 != 1;
+    let greater_than = 1 > 1;
+    let less_than = 1 < 1;
+    let is_true = true;
+    let is_false = !is_true;
+
+    let have_driver_license = false;
+    let have_passport = true;
+    let have_proof = have_driver_license || have_passport;
+    println!("Have proof: {}", have_proof);
+
+    let have_boarding_true = true;
+    let have_id = have_proof;
+    let can_board = have_boarding_true && have_id;
+    println!("Boarding Pass: {} ID:{}", have_boarding_true, have_id);
+    println!("Can board: {}", can_board);
+    println!("{}", is_equal_true);
+    println!("{}", not_equal_false);
+    println!("{}", is_not_equal);
+    println!("{}", greater_than);
+    println!("{}", less_than);
 }
