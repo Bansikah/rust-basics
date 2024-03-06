@@ -81,4 +81,20 @@ fn main() {
     println!("{}", is_not_equal);
     println!("{}", greater_than);
     println!("{}", less_than);
+
+    //Bitwise operators & and |, ^
+    let bitwise_and = 87 & 67;
+    let bitwise_or = 87 | 67;
+    println!("Bitwise and: {}", bitwise_and);
+    println!("Bitwise or: {}", bitwise_or);
+
+    let bitwise_xor = 87 ^ 67;
+    println!("Bitwise xor: {} ", bitwise_xor);
+
+    //shift operators
+    let left_shift = 87<<1;//shift one place to the left
+    println!("Shift to the left: {}", left_shift);
+
+    let right_shift = 87>>1;//shift one place to the right
+    println!("Shift to the right: {}", right_shift);
 }
