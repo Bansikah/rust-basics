@@ -42,4 +42,16 @@ fn main() {
         println!("{}", scope_variable);
     }
     println!("{}", scope_variable);
+
+    //Math Operators +, -, *, /, %
+    let modulus = 10 % 3;
+    println!("{}", modulus);
+
+    //Exponent Operations
+    let squared = i32::pow(2, 2);
+    let float_float = f32::powf(2.0, 2.0);
+    let float_integer = f32::powi(2.0, 2);
+    println!("{}", squared);
+    println!("{}", float_float);
+    println!("{}", float_integer);
 }
