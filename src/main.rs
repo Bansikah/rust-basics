@@ -1,4 +1,16 @@
 #![allow(unused_variables)]
+#![allow(unused_assignments)]
+//enums are created using the "enum "  keyword
+enum NavigationAids{
+    NDB = 3,
+    VOR = 2,
+    VORDME  = 5,
+    FIX{
+        name: String,
+        lat: f32,
+        lng: f32
+    }
+}
 
 fn main() {
     let durk = "Durk";
@@ -125,5 +137,11 @@ fn main() {
     } else{
         println!("You can't fly!");
     }
+
+    //  ENUMS
+    println!("NDB: \t{}", NavigationAids::NDB as u8);
+    println!("VOR: \t{}", NavigationAids::VOR as u8);
+    println!("VORDME: \t{}", NavigationAids::VORDME as u8);
+
 
 }
