@@ -97,4 +97,33 @@ fn main() {
 
     let right_shift = 87>>1;//shift one place to the right
     println!("Shift to the right: {}", right_shift);
+
+    //if else and if statements
+    let word = "Dog";
+    if word == "Duck" {
+        println!("Quack!");
+    }else if word == "Cat" {
+        println!("Meow!");
+    }else if word == "Dog" {
+        println!("Woof!");
+    }else if word == "Cow" {
+        println!("Moo!");
+    }else if word == "Horse" {
+        println!("Neigh!");
+    }else{
+        println!("I don't know what to say!");
+        
+    }
+
+    //Another example using logical operators
+    let available_craft = "Boeng";
+    let minimum_crow = 7;
+    let available_crow = 4;
+
+    if available_craft == "Boeng" || available_craft == "AirBus" && available_crow >= minimum_crow {
+        println!("You can fly!");
+    } else{
+        println!("You can't fly!");
+    }
+
 }
