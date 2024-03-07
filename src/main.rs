@@ -1,17 +1,18 @@
 #![allow(unused_variables)]
 #![allow(unused_assignments)]
 //enums are created using the "enum "  keyword
-enum NavigationAids{
-    NDB = 3,
-    VOR = 2,
-    VORDME  = 5,
-    FIX{
-        name: String,
-        lat: f32,
-        lng: f32
-    }
-}
 
+// #[repr(u8)]
+// enum NavigationAids {
+//     NDB = 3,
+//     VOR = 2,
+//     VORDME = 5,
+//     FIX {
+//         name: String,
+//         lat: f32,
+//         lng: f32
+//     }
+// }
 fn main() {
     let durk = "Durk";
     let airline = "Airlines";
@@ -139,9 +140,31 @@ fn main() {
     }
 
     //  ENUMS
-    println!("NDB: \t{}", NavigationAids::NDB as u8);
-    println!("VOR: \t{}", NavigationAids::VOR as u8);
-    println!("VORDME: \t{}", NavigationAids::VORDME as u8);
+//    println!("NDB: \t{}", NavigationAids::NDB as u8);
+//     println!("VOR: \t{}", NavigationAids::VOR as u8);
+//     println!("VORDME: \t{}", NavigationAids::VORDME as u8);
+//     println!("FIX: \t{}", NavigationAids::FIX as u8);
+//     println!("FIX: \t{}", NavigationAids::FIX { name: "test".to_string(), lat: 0.0, lng: 0.0} as u8);
 
+    //Option enumurations : it is an enum which has two values
+    let phrase = String::from("Durk Airlines");
+    let letter = phrase.chars().nth(3);
+    match letter {
+        Some(c) => println!("The 4th letter is {}", c),
+        None => println!("No 4th letter")
+    }
 
+    //Match Statements
+    let animal = "Horse";
+    match animal {
+        "Duck" => println!("Quack!"),
+        "Cat" => println!("Meow!"),
+        "Dog" => println!("Woof!"),
+        "Cow" => println!("Moo!"),
+        "Horse" => println!("Neigh!"),
+        _ => println!("I don't know what to say!")
+    }
 }
+
+
+
