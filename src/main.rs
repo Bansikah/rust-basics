@@ -164,7 +164,36 @@ fn main() {
         "Horse" => println!("Neigh!"),
         _ => println!("I don't know what to say!")
     }
+
+    //if let 
+    let person = "noel";
+
+    if let person = "noel"{
+        println!("Hello, {}!", person);
+    }
+
+    //Looops in rust
+    loop{
+let mut counter = 0;
+counter += 1;
+println!("{}", counter);
+if counter == 10{
+    break;
+}
 }
 
+//While  loops
+let mut counter2 = 0;
+counter2 += 1;
+while counter2 < 10{
+    println!("{}", counter2);
+    break;
+}
 
+//for loops
+let aircraft_array = ["Boeng 346", "usa 234", "Boeng 346", "china 2345"];
+for aircraft in aircraft_array{
+    println!("{}", aircraft);
+}
 
+}
