@@ -166,11 +166,11 @@ fn main() {
     }
 
     //if let 
-    let person = "noel";
+    // let person = "noel";
 
-    if let person = "noel"{
-        println!("Hello, {}!", person);
-    }
+    // if let person = "noel"{
+    //     println!("Hello, {}!", person);
+    // }
 
     //Looops in rust
     loop{
@@ -196,4 +196,15 @@ for aircraft in aircraft_array{
     println!("{}", aircraft);
 }
 
+//ownership and cloning
+
+ let original = String::from("Original Value");
+ println!("\nOrigin value is:{}", original);
+
+ let original = String::from("Another Value");
+ let copy = original.clone();
+ println!("\nOrigin value is:{}", original);
+ println!("\nCopy value is:{}", copy);
 }
+
+
