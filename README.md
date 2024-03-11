@@ -69,16 +69,16 @@ fn main() {
     }
 }
 ```
-Use code with caution.
+*Use code with caution.
 The read_file function attempts to read a file.
 If the file operation fails, it uses map_err to convert the standard library error to a String and returns Err(err_msg).
 In main, the error is propagated to the user if the file cannot be read.
 This is a basic example of error handling in Rust. You can define custom error types for more specific errors and use libraries like thiserror to simplify error message generation.
 
-Key Points:
+**ey Points:
 
-Result helps manage success and error scenarios.
-Pattern matching with match allows handling different outcomes.
-Errors can be propagated through the function call chain.
-panic! is for unrecoverable errors that halt program execution.
+*Result helps manage success and error scenarios.
+*Pattern matching with match allows handling different outcomes.
+*Errors can be propagated through the function call chain.
+*panic! is for unrecoverable errors that halt program execution.
 By understanding and using these concepts, you can write robust Rust programs that gracefully handle errors and provide informative feedback to the user.
