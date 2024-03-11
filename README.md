@@ -12,12 +12,14 @@ Err(E): This variant represents an error and holds a value of type E (typically 
 2. Example Function with Result:
 
 Rust
+```
 fn divide(x: i32, y: i32) -> Result<i32, String> {
     if y == 0 {
         return Err(String::from("Division by zero"));
     }
     Ok(x / y)
 }
+```
 Use code with caution.
 This divide function takes two integers and attempts to divide them.
 
@@ -28,6 +30,7 @@ If the division is successful, it returns Ok(x / y), containing the result.
 You can handle the Result using pattern matching in the match expression:
 
 Rust
+```
 fn main() {
     let result = divide(10, 2);
     match result {
@@ -35,6 +38,7 @@ fn main() {
         Err(err_msg) => println!("Error: {}", err_msg),
     }
 }
+```
 Use code with caution.
 The main function calls divide and stores the result in a variable.
 The match expression checks the variant of the result.
@@ -51,6 +55,7 @@ For unrecoverable errors (like invalid memory access), Rust uses the panic! macr
 Example with Propagating Error:
 
 Rust
+```
 fn read_file(filename: &str) -> Result<String, String> {
     let contents = std::fs::read_to_string(filename).map_err(|err| err.to_string())?;
     Ok(contents)
@@ -63,6 +68,7 @@ fn main() {
         Err(err_msg) => println!("Error reading file: {}", err_msg),
     }
 }
+```
 Use code with caution.
 The read_file function attempts to read a file.
 If the file operation fails, it uses map_err to convert the standard library error to a String and returns Err(err_msg).
