@@ -205,6 +205,20 @@ for aircraft in aircraft_array{
  let copy = original.clone();
  println!("\nOrigin value is:{}", original);
  println!("\nCopy value is:{}", copy);
+
+
+ //Borrowing: Allow another variable to take temporal ownership of data without deallocating the origal value
+
+ let orignal = String::from("Example original");
+ println!("\nThe original value is: {}", orignal);
+
+ {
+    let next = &orignal;
+    println!("\nThe next value is: {}", next);
+    
+ }
+ println!("\nThe original value is: {}", orignal);
+ 
 }
 
 
