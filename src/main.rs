@@ -234,7 +234,33 @@ for aircraft in aircraft_array{
 fn return_one_parameter(value: &i32) -> &i32{
     value
 }
+//Printing the greater functions examples
+let greater = return_greater(10, 5);
+println!("{}", greater);
 
+
+
+//example of borrowing with functions
+    let p1 = Point { x: 1, y: 2 };
+    let p2 = Point { x: 4, y: 5 };
+
+    let distance = distance(&p1, &p2);
+    println!("Distance between points: {}", distance);
+
+    let mut p3 = Point { x: 3, y: 4 };
+    scale_point(&mut p3, 2.0);
+    println!("Point after scaling: ({}, {})", p3.x, p3.y);
+
+
+//Closures: closures are functions without names
+let name = "Durk Airlines"
+
+let write_message = |slogan String| -> String{
+String::from(format!("{} .{}", name, slogan))
+};
+let phrase = write_message(String::from("hello this is Noel Draxler"));
+println!("{}", phrase);
+}
 //life time example two
 fn expelicit_lifetme<'a>(p1: &'a i32, p2: &'a i32) -> &'a i32{
     if p1 > p2 {
@@ -242,5 +268,13 @@ fn expelicit_lifetme<'a>(p1: &'a i32, p2: &'a i32) -> &'a i32{
     }else {
         p2
     }
-      
+
+  //Functions: a function is a block of code that can be resused
+
+fn return_greater(first: u8, second: u8) -> u8 {
+if first > second {
+first
+}else {
+second
+}
 }
